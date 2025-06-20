@@ -1,0 +1,4 @@
+uploads/
+aligned/
+*.log
+__pycache__/
