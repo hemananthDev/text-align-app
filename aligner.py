@@ -1,9 +1,11 @@
 def align_text(text):
     """
-    Simple alignment logic – updates each line to have equal width.
-    You can modify this function in the future.
+    Cleans and aligns all lines: removes extra spaces and pads to max length.
     """
-    lines = text.split('\n')
-    max_length = max(len(line) for line in lines)
-    aligned_lines = [line.ljust(max_length) for line in lines]
-    return '\n'.join(aligned_lines)
+    lines = text.splitlines()
+    # Remove empty lines and trim each line
+    cleaned = [line.strip() for line in lines if line.strip()]
+    max_len = max((len(line) for line in cleaned), default=0)
+    # Align all lines to same width
+    aligned = [line.ljust(max_len) for line in cleaned]
+    return '\n'.join(aligned)
