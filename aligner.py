@@ -1,5 +1,4 @@
 def align_text(text):
-    #
     """
     Cleans and aligns all lines: removes extra spaces and pads to max length.
     """
