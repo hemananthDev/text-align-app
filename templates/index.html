@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Text File Aligner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h2>✨ Welcome to Text Aligner v2! ✨</h2>
-    <p style="color: gray;">Upload your .txt file below to get an aligned version.</p>
+    <p>Upload your .txt file below to get an aligned version.</p>
 
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".txt" required>
@@ -14,4 +15,3 @@
     </form>
 </body>
 </html>
-
